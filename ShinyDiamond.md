@@ -29,7 +29,7 @@ data(diamond)
 ```
 
 
-### Feeting the Model
+### Fitting the Model
 I created a novel prediction algorithm to predict the cost in US$dollars for each 
 diamond stone.
 
@@ -37,16 +37,23 @@ diamond stone.
 ```r
 fit= lm(price ~ carat, data = diamond)
 ```
+
 A quick look at the data :
 
 
-
 ```r
- plot(diamond$carat, diamond$price, xlab = "Weight (carats)", ylab = "Price (SIN $)", bg = "blue", col = "red", cex = 1.1, pch = 21)
-abline(fit, lwd = 2)
+summary(diamond)
 ```
 
-![plot of chunk scatterplot](figure/scatterplot.png) 
+```
+##      carat            price       
+##  Min.   :0.1200   Min.   : 223.0  
+##  1st Qu.:0.1600   1st Qu.: 337.5  
+##  Median :0.1800   Median : 428.5  
+##  Mean   :0.2042   Mean   : 500.1  
+##  3rd Qu.:0.2500   3rd Qu.: 657.0  
+##  Max.   :0.3500   Max.   :1086.0
+```
 
 ## Here it is the application Diamond Price Calculation
 
